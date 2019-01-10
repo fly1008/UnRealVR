@@ -13,6 +13,7 @@ AStandingPawn::AStandingPawn()
 	PrimaryActorTick.bCanEverTick = true;
 
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
+	AutoReceiveInput = EAutoReceiveInput::Player0;
 	UCameraComponent* Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	USceneComponent* CameraRoot = CreateDefaultSubobject<USceneComponent>(TEXT("CameraRoot"));
 
@@ -52,7 +53,20 @@ void AStandingPawn::HandleFlying()
 		if (FlyUpwards)
 		{
 			FVector CurrentLocation = this->GetActorLocation();
-			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z + 1);
+			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z + 0.1);
+			this->SetActorLocation(CurrentLocation);
+			FlyDistance++;
+			//Richtungswechsel
+			if (FlyDistance == 50)
+			{
+				FlyUpwards = !FlyUpwards;
+				FlyDistance = 0;
+			}
+		}
+		else
+		{
+			FVector CurrentLocation = this->GetActorLocation();
+			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z - 0.1);
 			this->SetActorLocation(CurrentLocation);
 			FlyDistance++;
 			//Richtungswechsel
