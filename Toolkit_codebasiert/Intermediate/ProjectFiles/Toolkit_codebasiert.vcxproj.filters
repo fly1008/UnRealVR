@@ -23,6 +23,9 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+	<None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\Toolkit_codebasiert">
       <UniqueIdentifier>{F5387A8E-0D13-4414-BCC5-5C92ED9EFBF8}</UniqueIdentifier>
     </Filter>
@@ -47,15 +50,12 @@
     <ClInclude Include="..\..\Source\Toolkit_codebasiert\Toolkit_codebasiertGameModeBase.h">
       <Filter>Source\Toolkit_codebasiert</Filter>
     </ClInclude>
-    <None Include="DefaultInput.ini">
-      <Filter>Config</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\Toolkit_codebasiert\SittingPawn.h">
       <Filter>Source\Toolkit_codebasiert</Filter>
     </ClInclude>
-    <ClInclude Include="StandingPawn.h">
+    <ClInclude Include="..\..\Source\Toolkit_codebasiert\StandingPawn.h">
       <Filter>Source\Toolkit_codebasiert</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Toolkit_codebasiert\ControllerUser.h">

@@ -11,7 +11,7 @@ UMyMotionController::UMyMotionController()
 	HeldObjectLocation->SetRelativeLocation(*Location, false, nullptr, ETeleportType::None);
 
 	UStaticMeshComponent* Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-	ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("/Engine/VREditor/Devices/Vive/VivePreControllerMesh.mesh"));
+	ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Engine/VREditor/Devices/Vive/VivePreControllerMesh.VivePreControllerMesh'"));
 	UStaticMesh* Asset = MeshAsset.Object;
 	Mesh->SetStaticMesh(Asset);
 
