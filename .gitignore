@@ -66,5 +66,14 @@
 */Saved/*
 
 # Compiled source files for the engine to use
-*/Intermediate/*
+!*/Intermediate/ProjectFiles/*
 */Plugins/*/Intermediate/*
+*/Intermediate/AssetRegistryCache/*
+*/Intermediate/Build/*
+*/Intermediate/Config/*
+*/Intermediate/DatasmithContentTemp/*
+*/Intermediate/ReimportCache/*
+*/Intermediate/CachedAssetRegistry.bin
+*/Intermediate/ProjectFiles/*.cpp
+*/Intermediate/ProjectFiles/*.h
+*/Intermediate/ProjectFiles/*.ini

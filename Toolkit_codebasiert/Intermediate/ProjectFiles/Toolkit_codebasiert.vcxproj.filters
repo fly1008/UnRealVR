@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Toolkit_codebasiert.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{D3A72724-F2C6-45A0-B3A1-F555329B8170}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Toolkit_codebasiert.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\Toolkit_codebasiertEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{A54EED7A-926D-44F3-9A57-2708EF781018}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Toolkit_codebasiert">
+      <UniqueIdentifier>{F5387A8E-0D13-4414-BCC5-5C92ED9EFBF8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Toolkit_codebasiert\SittingPawn.cpp">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Toolkit_codebasiert\StandingPawn.cpp">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClCompile>
+    <None Include="..\..\Source\Toolkit_codebasiert\Toolkit_codebasiert.Build.cs">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Toolkit_codebasiert\Toolkit_codebasiert.cpp">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Toolkit_codebasiert\Toolkit_codebasiert.h">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Toolkit_codebasiert\Toolkit_codebasiertGameModeBase.cpp">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Toolkit_codebasiert\Toolkit_codebasiertGameModeBase.h">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClInclude>
+    <None Include="DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Toolkit_codebasiert\SittingPawn.h">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClInclude>
+    <ClInclude Include="StandingPawn.h">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Toolkit_codebasiert\ControllerUser.h">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Toolkit_codebasiert\MotionController.h">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Toolkit_codebasiert\ControllerUser.cpp">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Toolkit_codebasiert\MotionController.cpp">
+      <Filter>Source\Toolkit_codebasiert</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\HowTo_VTE.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{A9EE8BCF-4CA4-4DCC-9AC5-EA4F7A0CA819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HowTo_VTE.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\HowTo_VTEEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{8BDE69B8-AC9C-43D3-AD5E-77C8F78A8C13}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\HowTo_VTE">
+      <UniqueIdentifier>{41E3EE76-4794-4184-B410-9CCEEF11FA6C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HowTo_VTE\HowTo_VTE.Build.cs">
+      <Filter>Source\HowTo_VTE</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\HowTo_VTE\HowTo_VTE.cpp">
+      <Filter>Source\HowTo_VTE</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HowTo_VTE\HowTo_VTE.h">
+      <Filter>Source\HowTo_VTE</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HowTo_VTE\HowTo_VTEGameModeBase.cpp">
+      <Filter>Source\HowTo_VTE</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HowTo_VTE\HowTo_VTEGameModeBase.h">
+      <Filter>Source\HowTo_VTE</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\HowTo_VTE\Countdown.h">
+      <Filter>Source\HowTo_VTE</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\HowTo_VTE\Countdown.cpp">
+      <Filter>Source\HowTo_VTE</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

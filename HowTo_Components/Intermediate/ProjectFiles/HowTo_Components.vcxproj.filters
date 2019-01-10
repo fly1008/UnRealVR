@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\HowTo_Components.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{1C223CF3-2BE0-45D5-B8D9-BDE11332AEC4}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HowTo_Components.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\HowTo_ComponentsEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{507EE3F3-093F-4239-8E23-7752A5956F99}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\HowTo_Components">
+      <UniqueIdentifier>{4B67B989-FD6F-44FD-A78E-BACD8F107265}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HowTo_Components\HowTo_Components.Build.cs">
+      <Filter>Source\HowTo_Components</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\HowTo_Components\HowTo_Components.cpp">
+      <Filter>Source\HowTo_Components</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HowTo_Components\HowTo_Components.h">
+      <Filter>Source\HowTo_Components</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HowTo_Components\HowTo_ComponentsGameModeBase.cpp">
+      <Filter>Source\HowTo_Components</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HowTo_Components\HowTo_ComponentsGameModeBase.h">
+      <Filter>Source\HowTo_Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\HowTo_Components\CollidingPawn.h">
+      <Filter>Source\HowTo_Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HowTo_Components\CollidingPawnMovementComponent.h">
+      <Filter>Source\HowTo_Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\HowTo_Components\CollidingPawn.cpp">
+      <Filter>Source\HowTo_Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\HowTo_Components\CollidingPawnMovementComponent.cpp">
+      <Filter>Source\HowTo_Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

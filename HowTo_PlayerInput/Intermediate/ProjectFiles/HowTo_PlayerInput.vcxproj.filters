@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\HowTo_PlayerInput.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{94133DB0-3243-4C0A-BA7D-AA947C940C18}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HowTo_PlayerInput.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\HowTo_PlayerInputEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{F9B77767-81BE-4D70-9F13-AD313F0DD4B6}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\HowTo_PlayerInput">
+      <UniqueIdentifier>{6C3FBA88-A521-4A82-BDA3-33632EA1149F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HowTo_PlayerInput\HowTo_PlayerInput.Build.cs">
+      <Filter>Source\HowTo_PlayerInput</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\HowTo_PlayerInput\HowTo_PlayerInput.cpp">
+      <Filter>Source\HowTo_PlayerInput</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HowTo_PlayerInput\HowTo_PlayerInput.h">
+      <Filter>Source\HowTo_PlayerInput</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HowTo_PlayerInput\HowTo_PlayerInputGameModeBase.cpp">
+      <Filter>Source\HowTo_PlayerInput</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HowTo_PlayerInput\HowTo_PlayerInputGameModeBase.h">
+      <Filter>Source\HowTo_PlayerInput</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\HowTo_PlayerInput\MyPawn.h">
+      <Filter>Source\HowTo_PlayerInput</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\HowTo_PlayerInput\MyPawn.cpp">
+      <Filter>Source\HowTo_PlayerInput</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

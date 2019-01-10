@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\HowTo_PlayerCamera.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{97968E7D-43B9-441C-B5A6-8C1E91B03069}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HowTo_PlayerCamera.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\HowTo_PlayerCameraEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{E5C3CB0C-C423-47BB-8DE6-CC0FB355E3A3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\HowTo_PlayerCamera">
+      <UniqueIdentifier>{AFCD7E7E-E646-4B2B-B928-5DCE42985741}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HowTo_PlayerCamera\HowTo_PlayerCamera.Build.cs">
+      <Filter>Source\HowTo_PlayerCamera</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\HowTo_PlayerCamera\HowTo_PlayerCamera.cpp">
+      <Filter>Source\HowTo_PlayerCamera</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HowTo_PlayerCamera\HowTo_PlayerCamera.h">
+      <Filter>Source\HowTo_PlayerCamera</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HowTo_PlayerCamera\HowTo_PlayerCameraGameModeBase.cpp">
+      <Filter>Source\HowTo_PlayerCamera</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HowTo_PlayerCamera\HowTo_PlayerCameraGameModeBase.h">
+      <Filter>Source\HowTo_PlayerCamera</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\HowTo_PlayerCamera\PawnWithCamera.h">
+      <Filter>Source\HowTo_PlayerCamera</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\HowTo_PlayerCamera\PawnWithCamera.cpp">
+      <Filter>Source\HowTo_PlayerCamera</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
