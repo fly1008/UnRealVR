@@ -23,7 +23,7 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
-	<None Include="..\..\Config\DefaultInput.ini">
+    <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Toolkit_codebasiert">
@@ -61,15 +61,9 @@
     <ClInclude Include="..\..\Source\Toolkit_codebasiert\ControllerUser.h">
       <Filter>Source\Toolkit_codebasiert</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Toolkit_codebasiert\MotionController.h">
-      <Filter>Source\Toolkit_codebasiert</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Toolkit_codebasiert\ControllerUser.cpp">
-      <Filter>Source\Toolkit_codebasiert</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Toolkit_codebasiert\MotionController.cpp">
       <Filter>Source\Toolkit_codebasiert</Filter>
     </ClCompile>
   </ItemGroup>

@@ -12,13 +12,6 @@ AStandingPawn::AStandingPawn()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	AutoPossessPlayer = EAutoReceiveInput::Player0;
-	AutoReceiveInput = EAutoReceiveInput::Player0;
-	UCameraComponent* Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	USceneComponent* CameraRoot = CreateDefaultSubobject<USceneComponent>(TEXT("CameraRoot"));
-
-	Camera->SetupAttachment(CameraRoot);
-
 	//true als Default. Somit wird zuerst nach oben geflogen, wenn fliegen enabled ist
 	FlyUpwards = true;
 	FlyDistance = 0;

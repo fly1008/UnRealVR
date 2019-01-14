@@ -410,21 +410,19 @@
     <NMakeOutput>..\..\Binaries\HTML5\Toolkit_codebasiert-HTML5-Shipping.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\Toolkit_codebasiert\MotionController.cpp" />
     <ClInclude Include="..\..\Source\Toolkit_codebasiert\ControllerUser.h" />
-    <ClInclude Include="..\..\Source\Toolkit_codebasiert\MotionController.h" />
     <None Include="..\..\Toolkit_codebasiert.uproject" />
     <None Include="..\..\Source\Toolkit_codebasiert.Target.cs" />
     <None Include="..\..\Source\Toolkit_codebasiertEditor.Target.cs" />
     <None Include="..\..\Config\DefaultEditor.ini" />
     <None Include="..\..\Config\DefaultEngine.ini" />
     <None Include="..\..\Config\DefaultGame.ini" />
-	<None Include="..\..\Config\DefaultInput.ini" />
+    <None Include="..\..\Config\DefaultInput.ini" />
     <ClCompile Include="..\..\Source\Toolkit_codebasiert\ControllerUser.cpp" />
     <ClCompile Include="..\..\Source\Toolkit_codebasiert\SittingPawn.cpp" />
     <ClInclude Include="..\..\Source\Toolkit_codebasiert\SittingPawn.h" />
     <ClCompile Include="..\..\Source\Toolkit_codebasiert\StandingPawn.cpp" />
-	<ClInclude Include="..\..\Source\Toolkit_codebasiert\StandingPawn.h" />
+    <ClInclude Include="..\..\Source\Toolkit_codebasiert\StandingPawn.h" />
     <None Include="..\..\Source\Toolkit_codebasiert\Toolkit_codebasiert.Build.cs" />
     <ClCompile Include="..\..\Source\Toolkit_codebasiert\Toolkit_codebasiert.cpp" />
     <ClInclude Include="..\..\Source\Toolkit_codebasiert\Toolkit_codebasiert.h" />

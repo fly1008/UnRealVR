@@ -13,7 +13,6 @@ class TOOLKIT_CODEBASIERT_API ASittingPawn : public AControllerUser
 
 private:
 	FVector* CameraHeight;
-	USceneComponent* CameraRoot;
 
 public:
 	// Sets default values for this pawn's properties

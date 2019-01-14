@@ -10,11 +10,6 @@ ASittingPawn::ASittingPawn()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	AutoPossessPlayer = EAutoReceiveInput::Player0;
-	UCameraComponent* Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	CameraRoot = CreateDefaultSubobject<USceneComponent>(TEXT("CameraRoot"));
-
-	Camera->SetupAttachment(CameraRoot);
 	CameraHeight = new FVector(0, 0, 121);
 }
 

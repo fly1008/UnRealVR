@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "MotionController.h"
+#include "MotionControllerComponent.h"
 #include "GameFramework/Pawn.h"
 #include "HeadMountedDisplay/Public/MotionControllerComponent.h"
 #include "ControllerUser.generated.h"
@@ -20,12 +20,34 @@ public:
 	// Sets default values for this pawn's properties
 	AControllerUser();
 
-	UMyMotionController* LeftController;
-	UMyMotionController* RightController;
+	UPROPERTY(EditAnywhere)
+	UMotionControllerComponent* LeftController;
+	UPROPERTY(EditAnywhere)
+	UMotionControllerComponent* RightController;
+
+	USceneComponent* CameraRoot;
+
+	USceneComponent* HeldObjectLocationL;
+	bool isHoldingL;
+
+	USceneComponent* HeldObjectLocationR;
+	bool isHoldingR;
+
+	virtual void PickUpObject(UMotionControllerComponent &Controller);
+	virtual void DropObject(UMotionControllerComponent &Controller);
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+private:
+	virtual void InitController();
+
+	UPrimitiveComponent* HitComponentL;
+	AActor* PickedUpActorL;
+
+	UPrimitiveComponent* HitComponentR;
+	AActor* PickedUpActorR;
 
 public:
 	// Called every frame
