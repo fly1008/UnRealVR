@@ -46,7 +46,7 @@ void AStandingPawn::HandleFlying()
 		if (FlyUpwards)
 		{
 			FVector CurrentLocation = this->GetActorLocation();
-			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z + 0.1);
+			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z + 0.05);
 			this->SetActorLocation(CurrentLocation);
 			FlyDistance++;
 			//Richtungswechsel
@@ -59,7 +59,7 @@ void AStandingPawn::HandleFlying()
 		else
 		{
 			FVector CurrentLocation = this->GetActorLocation();
-			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z - 0.1);
+			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z - 0.05);
 			this->SetActorLocation(CurrentLocation);
 			FlyDistance++;
 			//Richtungswechsel
@@ -100,30 +100,34 @@ void AStandingPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAction("LeftTouchpadPress", EInputEvent::IE_Pressed, this, &AStandingPawn::MotionControllerLeftTouchpadPressed);
-	PlayerInputComponent->BindAction("LeftTouchpadPress", EInputEvent::IE_Released, this, &AStandingPawn::MotionControllerLeftTouchpadReleased);
-	PlayerInputComponent->BindAction("RightTouchpadPress", EInputEvent::IE_Pressed, this, &AStandingPawn::MotionControllerRightTouchpadPressed);
-	PlayerInputComponent->BindAction("RightTouchpadPress", EInputEvent::IE_Released, this, &AStandingPawn::MotionControllerRightTouchpadReleased);
+	PlayerInputComponent->BindAction("TrackpadUpLeft", EInputEvent::IE_Pressed, this, &AStandingPawn::MotionControllerLeftTouchpadPressed);
+	PlayerInputComponent->BindAction("TrackpadUpLeft", EInputEvent::IE_Released, this, &AStandingPawn::MotionControllerLeftTouchpadReleased);
+	PlayerInputComponent->BindAction("TrackpadUpRight", EInputEvent::IE_Pressed, this, &AStandingPawn::MotionControllerRightTouchpadPressed);
+	PlayerInputComponent->BindAction("TrackpadUpRight", EInputEvent::IE_Released, this, &AStandingPawn::MotionControllerRightTouchpadReleased);
 
 }
 
 void AStandingPawn::MotionControllerLeftTouchpadPressed()
 {
 	MovingWithLeftController = true;
+	UE_LOG(LogTemp, Display, TEXT("MotionControllerLeftTouchpadPressed"));
 }
 
 void AStandingPawn::MotionControllerLeftTouchpadReleased()
 {
 	MovingWithLeftController = false;
+	UE_LOG(LogTemp, Display, TEXT("MotionControllerLeftTouchpadReleased"));
 }
 
 void AStandingPawn::MotionControllerRightTouchpadPressed()
 {
 	MovingWithRightController = true;
+	UE_LOG(LogTemp, Display, TEXT("MotionControllerRightTouchpadPressed"));
 }
 
 void AStandingPawn::MotionControllerRightTouchpadReleased()
 {
 	MovingWithRightController = false;
+	UE_LOG(LogTemp, Display, TEXT("MotionControllerRightTouchpadReleased"));
 }
 

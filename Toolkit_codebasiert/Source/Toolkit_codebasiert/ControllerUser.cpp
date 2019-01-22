@@ -76,17 +76,20 @@ void AControllerUser::MotionControllerLeftTriggerPressed()
 {
 	if (!isHoldingL)
 	{
+		UE_LOG(LogTemp, Display, TEXT("MotionControllerLeftTriggerPressed"));
 		PickUpObject(*LeftController);
 	}
 }
 
 void AControllerUser::MotionControllerLeftTriggerReleased()
 {
+	UE_LOG(LogTemp, Display, TEXT("MotionControllerLeftTriggerReleased"));
 	DropObject(*LeftController);
 }
 
 void AControllerUser::MotionControllerRightTriggerPressed()
 {
+	UE_LOG(LogTemp, Display, TEXT("MotionControllerRightTriggerPressed"));
 	if (!isHoldingR) 
 	{
 		PickUpObject(*RightController);
@@ -95,6 +98,7 @@ void AControllerUser::MotionControllerRightTriggerPressed()
 
 void AControllerUser::MotionControllerRightTriggerReleased()
 {
+	UE_LOG(LogTemp, Display, TEXT("MotionControllerRightTriggerReleased"));
 	DropObject(*RightController);
 }
 
