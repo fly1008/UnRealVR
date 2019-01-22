@@ -50,7 +50,7 @@ void AStandingPawn::HandleFlying()
 			this->SetActorLocation(CurrentLocation);
 			FlyDistance++;
 			//Richtungswechsel
-			if (FlyDistance == 50)
+			if (FlyDistance == 100)
 			{
 				FlyUpwards = !FlyUpwards;
 				FlyDistance = 0;
@@ -63,7 +63,7 @@ void AStandingPawn::HandleFlying()
 			this->SetActorLocation(CurrentLocation);
 			FlyDistance++;
 			//Richtungswechsel
-			if (FlyDistance == 50)
+			if (FlyDistance == 100)
 			{
 				FlyUpwards = !FlyUpwards;
 				FlyDistance = 0;
