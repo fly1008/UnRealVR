@@ -19,6 +19,10 @@ AStandingPawn::AStandingPawn()
 	MovingWithLeftController = false;
 	MovingWithRightController = false;
 
+	flyingIntensity = 0.1;
+
+	SetActorEnableCollision(true);
+	
 }
 
 // Called when the game starts or when spawned
@@ -46,7 +50,7 @@ void AStandingPawn::HandleFlying()
 		if (FlyUpwards)
 		{
 			FVector CurrentLocation = this->GetActorLocation();
-			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z + 0.05);
+			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z + flyingIntensity);
 			this->SetActorLocation(CurrentLocation);
 			FlyDistance++;
 			//Richtungswechsel
@@ -59,7 +63,7 @@ void AStandingPawn::HandleFlying()
 		else
 		{
 			FVector CurrentLocation = this->GetActorLocation();
-			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z - 0.05);
+			CurrentLocation.Set(CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z - flyingIntensity);
 			this->SetActorLocation(CurrentLocation);
 			FlyDistance++;
 			//Richtungswechsel
@@ -90,8 +94,9 @@ void AStandingPawn::HandleMovement()
 		Direction = RightController->GetForwardVector() + LeftController->GetForwardVector();
 	}
 
+	FVector NewPosition = this->GetActorLocation();
 	FVector CurrentPosition = this->GetActorLocation();
-	FVector NewPosition = FVector(CurrentPosition.X + Direction.X, CurrentPosition.Y + Direction.Y, CurrentPosition.Z);
+	NewPosition = FVector(CurrentPosition.X + Direction.X, CurrentPosition.Y + Direction.Y, CurrentPosition.Z);
 	this->SetActorLocation(NewPosition);
 }
 
@@ -130,4 +135,7 @@ void AStandingPawn::MotionControllerRightTouchpadReleased()
 	MovingWithRightController = false;
 	UE_LOG(LogTemp, Display, TEXT("MotionControllerRightTouchpadReleased"));
 }
+
+
+
 

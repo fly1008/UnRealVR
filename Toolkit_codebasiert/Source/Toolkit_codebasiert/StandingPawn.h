@@ -20,6 +20,9 @@ private:
 	bool FlyUpwards;
 	int FlyDistance;
 
+	UPROPERTY(EditAnywhere)
+	float flyingIntensity;
+
 	//Nur der stehende Pawn soll sich bewegen können. Im Sitzen macht das keinen Sinn
 	bool MovingWithRightController;
 	bool MovingWithLeftController;
@@ -52,4 +55,5 @@ public:
 
 	UFUNCTION()
 	virtual void MotionControllerRightTouchpadReleased();
+
 };

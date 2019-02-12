@@ -33,6 +33,9 @@ public:
 	USceneComponent* HeldObjectLocationR;
 	bool isHoldingR;
 
+	UPROPERTY(EditAnywhere)
+	bool pickFromDistance;
+
 	virtual void PickUpObject(UMotionControllerComponent &Controller);
 	virtual void DropObject(UMotionControllerComponent &Controller);
 
@@ -43,11 +46,11 @@ protected:
 private:
 	virtual void InitController();
 
+	virtual void EvaluatePickUpResult(bool result, UMotionControllerComponent &Controller, FHitResult &OutHit);
+
 	UPrimitiveComponent* HitComponentL;
-	AActor* PickedUpActorL;
 
 	UPrimitiveComponent* HitComponentR;
-	AActor* PickedUpActorR;
 
 public:
 	// Called every frame

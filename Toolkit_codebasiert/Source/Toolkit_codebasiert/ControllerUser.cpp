@@ -18,6 +18,7 @@ AControllerUser::AControllerUser()
 	UCameraComponent* Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	CameraRoot = CreateDefaultSubobject<USceneComponent>(TEXT("CameraRoot"));
 	Camera->SetupAttachment(CameraRoot);
+	pickFromDistance = false;
 
 	InitController();
 }
@@ -103,16 +104,30 @@ void AControllerUser::MotionControllerRightTriggerReleased()
 }
 
 void AControllerUser::PickUpObject(UMotionControllerComponent &Controller)
-{
+{	
 	FVector WorldLocation = Controller.GetComponentLocation();
 	FVector ForwardVector = Controller.GetForwardVector();
-	FVector EndVector = (ForwardVector * 1000) + WorldLocation;
 	TArray<TEnumAsByte<EObjectTypeQuery>> TraceObjects;
-	TraceObjects.Add(UEngineTypes::ConvertToObjectType(ECC_PhysicsBody));
 	FHitResult OutHit;
-	bool result = UKismetSystemLibrary::LineTraceSingleForObjects(this, WorldLocation, EndVector, TraceObjects, false, TArray<AActor*>(),
-		EDrawDebugTrace::ForDuration, OutHit, true, FLinearColor::Red, FLinearColor::Green, 5.0F);
+	TraceObjects.Add(UEngineTypes::ConvertToObjectType(ECC_PhysicsBody));
+	if (pickFromDistance) {
+		FVector EndVector = (ForwardVector * 1000) + WorldLocation;
+		bool result = UKismetSystemLibrary::LineTraceSingleForObjects(this, WorldLocation, EndVector, TraceObjects, false, TArray<AActor*>(),
+			EDrawDebugTrace::ForDuration, OutHit, true, FLinearColor::Red, FLinearColor::Green, 2.0F);
+		EvaluatePickUpResult(result, Controller, OutHit);
+	}
+	else 
+	{
+		FVector EndVector = (ForwardVector*10) + WorldLocation;
+		bool result = UKismetSystemLibrary::LineTraceSingleForObjects(this, WorldLocation, EndVector, TraceObjects, false, TArray<AActor*>(),
+			EDrawDebugTrace::ForDuration, OutHit, true, FLinearColor::Transparent, FLinearColor::Transparent, 0.0F);
+		EvaluatePickUpResult(result, Controller, OutHit);
 
+	}
+}
+
+void AControllerUser::EvaluatePickUpResult(bool result, UMotionControllerComponent &Controller, FHitResult &OutHit) 
+{
 	if (result)
 	{
 		//Definieren der Outputvariablen von BreakHitResult
@@ -139,7 +154,6 @@ void AControllerUser::PickUpObject(UMotionControllerComponent &Controller)
 			HitComponentR = HComponent;
 			if (HitComponentR->IsAnySimulatingPhysics())
 			{
-				PickedUpActorR = HitActor;
 				HitComponentR->SetSimulatePhysics(false);
 				EAttachmentRule InLocationRule = EAttachmentRule::SnapToTarget;
 				EAttachmentRule InRotationRule = EAttachmentRule::SnapToTarget;
@@ -149,12 +163,11 @@ void AControllerUser::PickUpObject(UMotionControllerComponent &Controller)
 				isHoldingR = true;
 			}
 		}
-		else 
+		else
 		{
 			HitComponentL = HComponent;
 			if (HitComponentL->IsAnySimulatingPhysics())
 			{
-				PickedUpActorL = HitActor;
 				HitComponentL->SetSimulatePhysics(false);
 				EAttachmentRule InLocationRule = EAttachmentRule::SnapToTarget;
 				EAttachmentRule InRotationRule = EAttachmentRule::SnapToTarget;
@@ -171,40 +184,34 @@ void AControllerUser::DropObject(UMotionControllerComponent &Controller)
 {
 	if (Controller.GetFName().Compare(RightController->GetFName()) == 0)
 	{
-		if (IsValid(PickedUpActorR))
+		if (IsValid(HitComponentR))
 		{
 			EDetachmentRule LocationRule = EDetachmentRule::KeepWorld;
 			EDetachmentRule RotationRule = EDetachmentRule::KeepWorld;
 			EDetachmentRule ScaleRule = EDetachmentRule::KeepWorld;
 			FDetachmentTransformRules Rules = FDetachmentTransformRules(LocationRule, RotationRule, ScaleRule, false);
-			PickedUpActorR->DetachFromActor(Rules);
+			HitComponentR->DetachFromComponent(Rules);
 
-			if (IsValid(HitComponentR))
-			{
-				HitComponentR->SetSimulatePhysics(true);
-				isHoldingR = false;
-				HitComponentR = nullptr;
-				PickedUpActorR = nullptr;
-			}
+			HitComponentR->SetSimulatePhysics(true);
+			isHoldingR = false;
+			HitComponentR = nullptr;
+			
 		}
 	}
 	else
 	{
-		if (IsValid(PickedUpActorL))
+		if (IsValid(HitComponentL))
 		{
 			EDetachmentRule LocationRule = EDetachmentRule::KeepWorld;
 			EDetachmentRule RotationRule = EDetachmentRule::KeepWorld;
 			EDetachmentRule ScaleRule = EDetachmentRule::KeepWorld;
 			FDetachmentTransformRules Rules = FDetachmentTransformRules(LocationRule, RotationRule, ScaleRule, false);
-			PickedUpActorL->DetachFromActor(Rules);
+			HitComponentL->DetachFromComponent(Rules);
 
-			if (IsValid(HitComponentL))
-			{
-				HitComponentL->SetSimulatePhysics(true);
-				isHoldingL = false;
-				HitComponentL = nullptr;
-				PickedUpActorL = nullptr;
-			}
+			HitComponentL->SetSimulatePhysics(true);
+			isHoldingL = false;
+			HitComponentL = nullptr;
+		
 		}
 	}
 }
