@@ -1,0 +1,1 @@
+Dieses Projekt liefert lediglich eine Einführung dazu, wie eine Kamera verwendet wird. Es wird ein Schwenk um den Tisch des Starter Contents durchgeführt.

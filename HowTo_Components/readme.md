@@ -1,0 +1,1 @@
+In diesem Projekt wird ein Pawn erstellt, der mit A, W, S, D gesteuert werden kann. Mit einem Druck auf die Leertaste wird der Pawn entflammt. Dadurch wird die grundlegende Verwendung eines Pawns zusammen mit dem Input-Mapping aufgezeigt.
