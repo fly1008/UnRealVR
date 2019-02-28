@@ -1,0 +1,1 @@
+In diesem Projekt wird lediglich etwas Input-Mapping gemacht. Ein Pawn kann sich dann bewegen und anschwellen, bzw. schrumpfen, indem die Scale geändert wird.
