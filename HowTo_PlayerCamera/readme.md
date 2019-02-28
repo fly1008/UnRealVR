@@ -1,0 +1,1 @@
+In diesem Projekt wird eine Kamera an einen Pawn gehängt. Die Kamera wird durch Input von Tastaur und Maus gesteuert. Bewegung, Zoom und Rotation sind möglich.
