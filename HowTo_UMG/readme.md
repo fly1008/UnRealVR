@@ -1,0 +1,1 @@
+In diesem Projekt wird ein Menü mit Hilfe von UMG entwickelt. Es wird auch aufgezeigt, wie man von einem Menü zu einem anderen navigieren kann.
