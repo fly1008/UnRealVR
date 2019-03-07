@@ -1,0 +1,1 @@
+In diesem Projekt wird mittels C++ zunächste eine Klasse angelegt, die einen Countdown ablaufen lässt. Später wird ein Blueprint von dieser Klasse angelegt und darin ein Event aus der C++-Klasse überschrieben, um bei Ablauf des Countdowns eine Animation auszulösen.
