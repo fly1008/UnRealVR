@@ -1,0 +1,1 @@
+Im Rahmen dieses Projektes wird ein First-Person-Shooter erstellt. Es werden diverse Elemente der Programmierung in Unreal vereint. So wird C++ verwendet, wie auch Blueprints und Kombinationen davon. Außerdem werden Animationen für Character verwendet und neue Elemente in Levels zur Laufzeit angelegt.
