@@ -1,0 +1,1 @@
+Dieses Projekt zeigt lediglich einen Pawn und einen GameMode mit grundsetzlichen Einstellungen, die im VR-Kontext verwendet werden sollen/können.
