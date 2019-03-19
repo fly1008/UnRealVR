@@ -1,0 +1,1 @@
+Es werden hier Linien erstellt, die darauf reagieren können, wenn sie Objekte treffen. Die Objekte können dann zum Beispiel die Farbe verändern. Außerdem wird innerhalb dieses Projektes eine Teleportation umgesetzt.
