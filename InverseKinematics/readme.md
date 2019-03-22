@@ -1,0 +1,1 @@
+Enthält die Umsetzung eines Spiegels der die Bewegungen eines Pawns/Characters reflektiert. Dabei bewegt sich der Körper des Pawns als Kette von Knochen durch die Daten von Motion-COntrollern und Brille.

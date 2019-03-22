@@ -1,0 +1,1 @@
+Das Projekt zeigt Fortbewegung im virtuellen Raum durch schauen in eine bestimmte Richtung.

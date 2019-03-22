@@ -1,0 +1,1 @@
+Alternative Implementierung zu Trace_Interaction_With_Menu1. Implementierung des Interfaces aus dem Projekt Trace_Interaction im Menü.

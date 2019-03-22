@@ -1,0 +1,1 @@
+Hier wird ein Menü gebaut, das im VR-Kontext verwendet werden kann. Eingabefelder werden ausgewählt, indem man sie anschaut und über das Drücken auf den MotionController aktiviert.

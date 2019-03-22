@@ -1,0 +1,1 @@
+In diesem Projekt wird gezeigt, wie man mit Motion-Controllern in einer VR-Umgebung interagieren kann. Dazu wird ein Button und ein Hebel erstellt. Außerdem werden Würfel gebaut, die man hochheben und auch werfen kann.
