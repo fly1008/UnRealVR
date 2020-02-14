@@ -1,2 +1,2 @@
 # UnRealVR
-VR projects using Unreal Engine. this repo has its origins in the maasters thesis of Christof Suffel.
+VR projects using Unreal Engine. this repo has its origins in the masters thesis of Christoph Suffel.
